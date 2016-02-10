@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# iconv script to convert encoding from UTF-8 to ASCII-8BIT.
+#
+# Syntax:
+#
+#     iconv-from-utf-8-to-us-ascii [inputfile ...]
+#
+# The `iconv` command does character set conversion.
+#
+# ## About
+#
+#   * Command: iconv-from-utf-8-to-us-ascii
+#   * Version: 1.0.0
+#   * Created: 2013-02-05
+#   * Updated: 2016-02-09
+#   * License: GPL
+#   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+set -euf
+iconv -f UTF-8 -t US-ASCII "$@"
